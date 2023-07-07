@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        javascript engine(software)
+        browser
+        nodejs(javascript engine, chrome)
+     -->
+     <script>
+        // Variables
+        // data => number
+        // 10, -20, 0, 1.2, 7.89
+        // data types 
+        // integer, float, double, long, short, 
+        // char, string, array, objects, ...
+
+        /*
+            number => 10, 10.2, 
+                infinite possible values for number data type 
+            string => 'x', "a", "abc", 'abc', 
+                infinite possible values for string data type 
+            boolean => true, false
+            undefined => undefined
+        */
+
+        /*
+            To declare a variable in js 
+            let
+            const
+            var 
+            (Hoisting)
+        */
+        // Keyword
+        // let a = 20; // a => number
+        // let b = true; // b => boolean
+        // let c = "aravind" ;// c => string, 
+        // let d = "undefined" ;// d => string
+        // let e = undefined ;// e => undefined
+
+        // operators
+        /*
+         *  1. Unary operators (single operand)
+         *  2. Binary operators ( two operands)
+         *  3. Ternary operators (three operands)
+         * 
+         * Arithmatic Operators(+, -, *, / , %) => binary
+         * increment (++) => unary operator
+         * decrement (--) => unary operators
+         */
+
+        //  let a = 10 + 2 
+         // a = 12 
+         // ++a => pre increment , a++ post increment
+         // a = 12
+        //  console.log(a) // 12
+        //  console.log(--a) // a = 11, 11
+        //  console.log(a++) // 11, a = 12
+
+        //  let x = ++a ; // a = 13, x = 13 
+        //  console.log(x, a) // 13, 13
+        //  x = x - a--; // x = 13 - 13 , a = 12
+        //  console.log(x, a) // 0, 12
+        //  console.log(x++) // 0, x = 1
+        //  console.log(x, a) // 1, 12
+
+        // a + b
+        // a => number
+        // b => number
+        // atleast one of the two operands are string type then + will be concatenation operator
+        // console.log("aravind" + undefined)
+        // aravindundefined
+        /*
+            a - b 
+            a => number
+            b => number
+        */
+    //    "2" => 2
+    // "23" => 23
+    // 
+
+    /*
+        + => arithmatic / concatenation
+
+        when atleast one operand is a string then + => concat operator in all other cases + will be arithmatic.
+
+        2 + 2 => 4 
+        3 + "a" => "3" + "a" => "3a"
+        false + true => Number(false) + Number(true)
+        0 + 1 = 1
+
+        String => Number
+        "$" => NaN
+        "23" => 23
+        "34.90103738" => 34.90103738
+        "a3456b" => NaN
+        "102" => 102
+
+        Boolean => Number
+
+        true => 1
+        false => 0
+
+        undefined => Number
+        undefined => NaN
+    */
+
+
+     /*
+        - => arithmatic
+        a - b => Number(a) - Number(b)
+
+         10 / undefined => 10 / Number(undefined)
+
+        10 / NaN => NaN
+     */
+     
+
+        /**
+         * 
+         * Logical Operators(&&, ||, !)
+         * 
+         */
+        // && => logical, & => bitwise
+        //  a && b
+        //  a => Boolean
+        //  b => boolean
+
+        //  true && true 
+        /*
+            a   b   &&
+            t   t   t
+            t   f   f
+            f   t   f
+            f   f   f
+        */
+
+        // false && () => false 
+        // false && x => false 
+
+        // true && true => true
+        // true && false => false 
+        // true && x = x
+        // true && a => a
+
+        // String => Boolean(false, true)
+
+        //  "ab" => true
+
+
+        // "ab" && "xyz"
+        // "" && "aravind"
+        // false
+        /*
+
+
+        ||
+
+        true || () => true
+        true || a => true
+
+        false || false => false 
+        false || true => true
+
+        false || () = > ()
+        */
+
+        // " " || () => " "
+
+        // conditional statements 
+        // if, else if, else 
+        // Boolean(18) => true
+        // Boolean(undefined) => false
+        // Boolean(NaN) => false
+        // if(NaN){
+        //     console.log("inside true")
+        // }
+
+        // if(false){
+        //     console.log("inside if")
+        // }
+        // else if(true){
+        //     console.log("inside else if")
+        // }
+        // else if(true){
+        //     console.log("inside second else if")
+        // }
+        // else {
+        //     console.log("inside else")
+        // }
+
+        // loops
+        // while, for, do while
+
+        // let i = 0 ;
+        // while(i < 2){ // 2 < 2
+        //     ++i;// i = 2
+        //     console.log('inside')
+        // }
+
+        /*
+        for(intialisation; comparision; updation){
+
+        }
+        */
+
+        // let a = 0;
+        // // a = 0 => 1 => 2 => 3
+        // for(a++; a < 3; ++a){
+        //         // 1 < 3, 2 < 3, 3 < 3
+        //     console.log(a) // 1, 2
+        // }
+        // console.log(a) // 3
+        // a < 2 && a++
+        // 3 < 2 && 3++ => false
+        // 1 < 2 && 1
+        //  true && 1 => 1 => true
+
+        // let a = 0;
+        // // a = 0 => 1 => 2 => 3
+        // for(++a; a < 2 && a++ ; a++){
+        //     console.log(a) // 2
+        // }
+        // console.log(a) // 3
+
+        /*                               F
+            intialisation => comparision => exit
+                                || T
+                             block of code
+                                ||
+            comparision <=  updation
+
+        */
+
+     </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+CSS
+
+grids
+flex
+animations
+media queries
+position
+
+
+Javascript:
+basics of javascript 
+operators
+variables
+data types
+conditional statements
+loops
+
+functions
+    callstack, execution context
+    scope chain
+    primtive and non primitive datatypes
+    closures
+    this
+    call by value call by reference 
+
+DOM
+    tree (memory level => )
+    manipulation, events
+    dynamic updations
+
+Async Javascript
+    event loop, callback queue, microtask queue
+    callbacks, callback hell
+    Promises
+    Promise chaining
+    async/await
+    fetch API
+
+    Auction status app
+
+Youtube clone
+
+
+
+
+
+
