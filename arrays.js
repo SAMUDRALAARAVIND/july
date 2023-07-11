@@ -240,11 +240,11 @@
 // slice => used to extract the sub array of an arrau
 
 
-let arr = [4, 5, 10, 90, 100, -20] ;
+// let arr = [4, 5, 10, 90, 100, -20] ;
 // let subArray = arr.slice(1, 3) // [1, 3)
 // console.log(subArray)
 
 // splice => insert elemnts anywhere and can delete the elements from anywhere
 // [4, 5, true, 90, 100, -20]
-arr.splice(2, 1, true) ;
-console.log(arr)
+// arr.splice(2, 1, true) ;
+// console.log(arr)
