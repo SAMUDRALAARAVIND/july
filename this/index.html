@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container" id="root">
+        <p class="para">
+            <span id="sukesh">Span 1</span>
+            <span>Span 2</span>
+        </p>
+        <b id="bold" style="color: red; font-size: 20px;">Bold Text</b>
+    </div>
+
+   <!-- 
+    The above HTML need to some data to able to understand 
+    by the CPU.
+
+    DOM
+    Document Object Model
+    Representation of Document in the form javascript objects is called DOM
+
+    root = {
+        className: "container",
+        id: "root",
+        children: [
+            {
+                tagName: "p",
+                className: "para",
+                children: [
+                    { // #400
+                        tagName: "span",
+                        innerText: "Span 1",
+                        style: {
+                            color: "#000000"
+                        },
+                        children: []
+                    },
+                    {
+                        tagName: "span",
+                        innerText: "Span 2",
+                        children: []
+                    }
+                ]
+            },
+            {
+                tagName: "b",
+                id:"bold",
+                style: {
+                    color: "red",
+                    font-size: "20px"
+                },
+                innerText: "Bold Text"
+            }
+        ],
+        tagName: "div"
+    }
+
+    HTML => parsed into javascript objects => we figured out that after parsing every HTML element(Node) is an object => in the RAM(HEAP) every html element is store as an object.
+
+
+    -->
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
