@@ -1,0 +1,22 @@
+javascript basics 
+    variables 
+    data types
+    operators 
+    short circuiting 
+    conditional statements
+    loops
+    objects
+    arrays
+    strings
+functions   
+    callstack execution flow
+    scope chain
+    closures
+    primitve and non-primitve variables 
+    call by val and call by ref
+    spread operator
+    destructuring
+    higher order functions 
+    callbacks
+this keyword 
+DOM
