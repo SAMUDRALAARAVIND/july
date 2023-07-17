@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .loader {
+            width: 10px; 
+            height: 10px;
+            border: 4px solid rgba(8, 0, 255, 0.195) ;
+            border-left: 4px solid blue ;
+            border-radius: 50%;
+            animation: loader 0.8s linear infinite ;
+        }
+        @keyframes loader {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        button {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- 
+     -->
+
+     <!-- <img src="https://picsum.photos/200/300" alt=""> -->
+
+     <!-- <button id="btn" onclick="addElementBetween()">
+        <span>1 One</span>
+        <b>2 Two</b>
+        <label>3 Three</label>
+    </button> -->
+
+
+
+    <!-- <button onClick="addElement()">Create Hierarchy Element</button> -->
+    <!-- <div id="container">
+        <p>I am <b>Aravind</b></p>
+        <p>Age: 100</p>
+    </div> -->
+
+    <!-- 
+
+        <h1>Aravind</h1>
+
+        button : 
+        {
+            children: [span, div.loader]
+        }
+
+     -->
+
+     <!-- <div id="test">
+        div1
+            <p style="margin: 0">Para 1<span>span 1</span></p>
+        div end
+     </div> -->
+
+     <!-- 
+        Events in javascript: 
+        
+    
+    -->
+
+     <!-- 
+        innerText : extracts the text inside an html element as it looks in the UI 
+        textContent: extracts the text inside an html element as it looks in the document(code)
+        innerHTML: will extract everything inside an html element (including tags);
+      -->
+
+    <script src="./dom-manupulations.js"></script>
+</body>
+</html>

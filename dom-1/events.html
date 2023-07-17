@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn {
+            padding: 10px;
+            width: 80px;
+            background-color: blue;
+            color: white ;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .parent {
+            padding: 20px;
+            background-color: blue;
+        }
+        .child {
+            padding: 20px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        mouse events 
+            scroll
+            click
+            moving mouse onto an element (mouseeneter)
+            moving mouse out from an element( mouseleave )
+            right click 
+        keyboard events 
+            press down a key (keydown)
+            press released (keyup)
+
+        other events 
+
+            changing the text of an element (input value change) => (change)
+            submitting a form  ( submit )
+     -->
+     <!-- <div 
+        class="btn" 
+        onclick="clickListener()"
+        onmouseenter="mouseEnterListener()"
+        onmouseleave="mouseLeaveListener()"
+        ondblclick="doubleClickListener()">Click Me</div> -->
+
+
+        <!-- <button id="btn">CLick Me</button>
+        <button id="remove">Remove listeners</button> -->
+
+        <!-- <button id="test">Change My Color</button> -->
+
+
+        <div class="parent">
+            Parent
+            <div class="child">Child</div>
+        </div>
+
+
+    <script src="./events.js"></script>
+</body>
+</html>
