@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./jira.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+    <div class="header-container">
+        <div class="dropdown-container">
+            <div class="dropdown" onclick="toggleItem()">
+                <strong>Projects</strong>
+                <span class="material-icons">expand_more</span>
+            </div>
+            <div class="dropdown-list">
+                <a href="#">First Item</a>
+                <a href="#">Second Item</a>
+                <a href="#">Third Item</a>
+            </div>
+        </div>
+        <button id="create">Create</button>
+    </div>
+
+    <div class="panels-container">
+        <div class="panel" id="TODO">
+            <b>To Do</b>
+        </div>
+        <div class="panel" id="IN_PROGRESS">
+            <b>In Progress</b>
+        </div>
+        <div class="panel" id="DONE">
+            <b>Done</b>
+        </div>
+    </div>
+
+    <script src="./jira.js"></script>
+</body>
+</html>
