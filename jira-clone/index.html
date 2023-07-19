@@ -9,6 +9,13 @@
         #container {
             border: 2px solid red; 
             padding: 20px;
+            height: 200px;
+            margin-bottom: 100px;
+        }
+        #container1 {
+            padding: 20px;
+            border: 2px solid blue ;
+            height: 200px;
         }
         form {
             border: 2px solid red ;
@@ -33,6 +40,11 @@
             padding: 20px;
             box-shadow: 2px 2px 10px gray;
             width: 50vw ;
+        }
+        span {
+            background-color: blue;
+            color: white ;
+            padding: 10px;
         }
     </style>
 </head>
@@ -64,13 +76,28 @@
 
 
 
-    <button id="btn">Open Modal</button>
+    <!-- <button id="btn">Open Modal</button> -->
 
     <!-- <div class="modal">
         <div class="modal-container">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, illum?</p>
         </div>
     </div> -->
+
+
+    <div id="container">
+        <span id="source" draggable="true">Span element</span>
+    </div>
+
+    <div id="container1">
+
+    </div>
+
+
+    <div id="test">
+        <p>One</p>
+        <p>Two</p>
+    </div>
 
     <script src="./practice.js"></script>
     <!-- <script src="./index.js"></script> -->

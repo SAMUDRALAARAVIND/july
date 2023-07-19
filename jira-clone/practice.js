@@ -48,7 +48,7 @@ form.addEventListener("submit", (event) => {
 })
 */
 
-const input = document.querySelector("input");
+// const input = document.querySelector("input");
 
 // input.addEventListener("focus" , () => {
 //     console.log("focused the input")
@@ -117,3 +117,68 @@ task = {
 
 */
 
+
+
+// const span = document.querySelector("#container > span") // #300
+// // span => object (HTML Object in the HEAP memory) 
+// const container1 = document.getElementById("container1") ;
+
+// function copyElement() {
+//     let newSpan = span.cloneNode(true);
+//     console.log(newSpan) // #400
+//     console.log(span) // #300
+//     console.log(span === newSpan) // #300 === #400
+//     container1.appendChild(newSpan); 
+// }
+
+
+const container = document.getElementById("container");
+const container1 = document.getElementById("container1");
+
+const draggableElement = document.querySelector("#container > span") ; // span
+
+
+
+draggableElement.addEventListener("dragstart" , (e) => {
+    e.dataTransfer.setData("element", e.target.id) // e.target === draggableElement.id = "source"
+    console.log("started dragging")
+});
+
+// container1.addEventListener("dragover", () => {
+//     console.log("dragging some element onto me")
+// })
+
+// container1.addEventListener("dragenter" , (e) => {
+//     console.log("entered some element onto me")
+// })
+
+// container1.addEventListener("dragleave", () => {
+//     console.log("some element left from me")
+// })
+
+container1.addEventListener("dragover", (e) => {
+    container1.style.border = "3px dotted green";
+    e.preventDefault();
+})
+
+container1.addEventListener("drop", (e) => {
+    // e.target => container1
+    const draggedElementId = e.dataTransfer.getData("element");  // draggedElementId = "source"
+    const sourceElement = document.getElementById(draggedElementId) ;// document.getElementById("source")
+    console.log(sourceElement.draggable)
+    sourceElement.draggable = false ; // Boolean("false") => true 
+    e.target.style.border = "2px solid blue"
+    e.target.appendChild(sourceElement);
+})
+
+/**
+ * 
+ * dragstart(span) => dragenter(container1) => dragover(container1) => drop(container1)
+ *  {key: value} =>  {key: value} => {key: value} => {key: value}
+ *  {id: "span"} => {id: "span"} => {id: "span"} => {id: "span"}
+ */
+
+const test = document.getElementById("test");
+console.log(test.childNodes)// all child nodes including text nodes 5
+
+console.log(test.children) // only HTML element children excluding text nodes 2

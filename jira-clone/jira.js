@@ -17,7 +17,6 @@
         </div>
     </div>
  */
-
 const modalHtml = `
 <div class="modal-container">
     <span class="material-icons">close</span>
@@ -34,19 +33,22 @@ const modalHtml = `
     </form>
 </div>` ;
 
+let count = 0;
 
 const createElement = document.getElementById("create") ;
 
 createElement.addEventListener("click", () => {
-    const modal = document.createElement("div");
+    const modal = document.createElement("div");// #300, #400
     modal.className = "modal" ;
     modal.innerHTML = modalHtml ;
     document.body.appendChild(modal); // form will also becomes the part of DOM
 
     const form = document.getElementById("create-form");
+
     const removeFormListener = () => {
         form.removeEventListener("submit", formDataListener)
     }
+
     const formDataListener = (e) => {
         e.preventDefault();
         let elements = e.target.elements ; 
@@ -54,7 +56,7 @@ createElement.addEventListener("click", () => {
         for(let i = 0 ; i < elements.length; i++) {
             elements[i].name && (taskObject[elements[i].name] = elements[i].value)
         }
-        createTask(taskObject);
+        createTask(taskObject); 
         modal.remove();
         removeFormListener();
     }
@@ -74,12 +76,21 @@ function createTask(taskObject) {
     const taskContainer = document.createElement("div");
     taskContainer.className = "task" ;
     taskContainer.draggable = "true" ;
+    taskContainer.id = `task-${count}`
+    count++;
 
     taskContainer.innerHTML = `
             <b>${taskObject.title}</b>
             <strong>${taskObject.assignee}</strong>
-            <p>{${taskObject.description}</p>
-    `; 
+            <p>${taskObject.description}</p>
+    `;
+
+    taskContainer.addEventListener("dragstart", (e) => {
+        // set some information 
+        // id of the taskElement , id of the container from which the dragging is started
+        e.dataTransfer.setData("source", taskContainer.id);
+        e.dataTransfer.setData("parent", taskContainer.parentElement.id); // IN_PROGRESS, TODO, DONE
+    })
 
     const panel = document.getElementById(taskObject.status);
     panel.appendChild(taskContainer) ;
