@@ -1,0 +1,25 @@
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 97px);
+    height: 300px;
+    width: 300px;
+    margin: 50px auto;
+    gap: 4px;
+}
+.game > div {
+    padding: 10px;
+    background-color: blue;
+    cursor: pointer;
+    font-size: 40px;
+}
+.game > div:hover {
+    transform: scale(1.02);
+    background-color: rgba(0, 0, 255, 0.408);
+}
+#active-player {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 20px;
+}

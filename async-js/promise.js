@@ -164,13 +164,19 @@ let promise = loadData()
 
 
 // HOME WORK
-function callme(cb){
-    let prom = new Promise((resolve, reject) => {
-        cb(reject);
-        queueMicrotask(resolve);
-    })
-}
+// function callme(cb){ // #300
+//     let prom = new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             console.log(prom) // <rejected>
+//         }, 3000)
+//         cb(reject); // reject
+//         queueMicrotask(resolve);
+//     })
+// }
 
-callme((callback) => {
-    setTimeout(callback(), 2000);
-})
+// callme((callback) => {
+//     // callback = #40 -> reject
+//     // reject() , returns nothing and rejects the promise
+//     setTimeout(callback, 2000);
+//     // setTimeout( undefined , 2000)
+// })
