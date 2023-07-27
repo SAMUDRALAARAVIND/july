@@ -1,0 +1,97 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.724);
+    padding: 20px ;
+    font-weight: 600;
+    font-size: 20px;
+    color: white ;
+}
+#container {
+    padding: 20px; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 4px rgba(217, 214, 214, 0.475);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.card:hover {
+    transform: scale(1.05);
+}
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 2px solid gray;
+    align-items: center;
+}
+.left {
+    display: flex;
+    flex-direction: column;
+}
+.left > .case-number {
+    font-size: 12px;
+}
+.left > .badge {
+    padding: 2px 4px;
+    /* background-color: green;
+    color: white ; */
+    border-radius: 3px;
+}
+.right {
+    font-size: 12px;
+}
+.bottom {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.bottom > .price {
+    /* text-align: right; */
+    align-self: flex-end;
+}
+
+.approved {
+    background-color: blue;
+    color: white ;
+}
+.pending {
+    background-color: yellow;
+    color: black ;
+}
+.completed {
+    background-color: green;
+    color: white ;
+}
+.cancelled {
+    color: white ;
+    background-color: red;
+}
+
+@media screen and  (min-width: 700px){
+    #container {
+        grid-template-columns : repeat(4, 1fr);
+    }
+}
+
+@media screen and  (max-width: 700px){
+    #container {
+        grid-template-columns : repeat(2, 1fr);
+    }
+}
+
+@media screen and  (max-width: 400px){
+    #container {
+        grid-template-columns : repeat(1, 1fr);
+    }
+}
