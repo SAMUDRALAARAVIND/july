@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: black;
+}
+.search-container {
+    display: flex;
+    width: 70vw ;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    margin: auto;
+}
+.search-container > input {
+    flex-grow: 1;
+}
+.search-container > input:focus{ 
+    outline: none;
+}
+.search-container > input, .search-container > button {
+    padding: 10px 30px;
+}
+.search-container > button {
+    cursor: pointer;
+    background-color: #AAA;
+    border: none ;
+    border-radius: 4px;
+}
+#container { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.video{
+    padding: 10px;
+    color: white ;
+}
+.video > img {
+    width: 100%;
+}
+.video > b {
+    color: #AAA ;
+}

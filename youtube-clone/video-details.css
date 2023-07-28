@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: white ;
+}
+body {
+    background-color: black;
+}
+#video {
+    height: 40vh ;
+    border: 2px solid red;
+}
+.statistics{
+    border: 0.3px solid #AAA ;
+    border-left: none;
+    border-right: none;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.statistics > .left {
+    color : #AAA ;
+}
+.statistics > .right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.statistics > .right > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.channel-container {
+    padding: 10px ;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #AAA;
+}
+.channel-container  img {
+    width: 60px; 
+    height: 60px; 
+    border-radius: 50%;
+}
+.channel-container  > .left {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.channel-container  > .left  > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.channel-container  > .right {
+    align-self: center;
+    padding: 5px 10px;
+    background-color: #CC0000;
+    border-radius: 4px;
+    border: none ;
+    cursor: pointer;
+}

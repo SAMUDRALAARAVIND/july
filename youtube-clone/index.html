@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:ital,wght@0,200;0,500;0,600;0,900;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="youtube-home.css">
+</head>
+<body>
+    <!-- 
+        Youtube 
+        "am" => sent to the server => ML Algo
+        ||
+        List of results
+
+        results = [ "" , "", "", ""]
+
+        data flow is in both directions 
+            input: "js tut"
+
+            results: [
+                "js tutorial"
+                "js tutorial by x"
+                "javscript full course"
+            ]
+
+             "js tut"
+        client <=> server
+               ["", "", ""]
+
+        Youtube when you open a video
+            {
+                channel_info : {
+                    subscribers: 1000,
+                    channel_logo: "image_url",
+                    channel_name: "name of the channel"
+                },
+                video_info: {
+                    likesCount: 19,
+                    dislikesCount: 100,
+                    uploaded_date: "Date",
+                    total_comments: 190,
+                    comments_list: [
+                        {
+                            sender: "Aravind",
+                            comment_text: "Some random",
+                            user_icon: "image_url",
+                            timestamp: "",
+                            replies_count: 2829
+                        }
+                    ]
+                }
+            }
+
+                          server
+            frontend app => function (java) => Database
+                               REST API
+            API => application Programming interface
+
+            window.navigator.getGeoLocation()
+                                API
+              frontend app => geoLocation => internal software of PC
+     -->
+     <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search Video"> 
+        <button id="search">search</button>
+     </div>
+
+     <!--
+     {
+        "kind": "youtube#searchResult",
+        "etag": "VkzMO3_1aP7N6_zqHrw0DfivZ0M",
+        "id": {
+            "kind": "youtube#video",
+            "videoId": "28ewOqp-5ds"
+        },
+        "snippet": {
+            "publishedAt": "2023-07-28T04:12:45Z",
+            "channelId": "UCwlt7XMFAYUkqw84XPhZxUg",
+            "title": "चीन का मिनी टमाटर ।। आग लगा दी 10 रु. में ।। Js film house",
+            "description": "tipucomedy #tipukivideo #jsfilmhouse.",
+            "thumbnails": {
+                "default": {
+                    "url": "https://i.ytimg.com/vi/28ewOqp-5ds/default.jpg",
+                    "width": 120,
+                    "height": 90
+                },
+                "medium": {
+                    "url": "https://i.ytimg.com/vi/28ewOqp-5ds/mqdefault.jpg",
+                    "width": 320,
+                    "height": 180
+                },
+                "high": {
+                    "url": "https://i.ytimg.com/vi/28ewOqp-5ds/hqdefault.jpg",
+                    "width": 480,
+                    "height": 360
+                }
+            },
+            "channelTitle": "J S FILM HOUSE",
+            "liveBroadcastContent": "none",
+            "publishTime": "2023-07-28T04:12:45Z"
+        }
+    }
+    -->
+
+    <div id="container">
+    </div>
+
+    <!-- <script src="./index.js"></script> -->
+    <script src="./home.js"></script>
+</body>
+</html>
