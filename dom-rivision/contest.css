@@ -1,0 +1,196 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    display: none !important;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-items: center;
+    box-shadow: 1px 1px 5px rgba(128, 128, 128, 0.405);
+    margin-bottom: 40px;
+}
+.links {
+    gap: 20px;
+}
+.links a {
+    text-decoration: none;
+}
+
+
+
+
+
+.header {
+    width: 80vw ;
+    margin: auto;
+}
+.header > img {
+    width: 100%;
+}
+.search-container {
+    display: flex;
+    height: 50px;
+    background-color: rgba(128, 128, 128, 0.293);
+    align-items: center;
+    border-radius: 10px;
+}
+.search-container > input {
+    flex-grow: 1;
+    border: none;
+    background-color: transparent;
+    padding-left: 20px;
+}
+.search-container > .btn {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    align-self: stretch;
+    padding: 12px;
+}
+.search-container > input:focus{ 
+    outline: none;
+    
+}
+
+
+.filter-buttons {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+.filter-buttons > button {
+    border: none ;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+#all {
+    background-color: #EAAA00;
+}
+#veg {
+    background-color: #C4D600;
+}
+#non-veg {
+    background-color: #DC582A;
+}
+
+
+#cards-container {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    overflow-y: scroll;
+    height: 60vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 4px rgba(128, 128, 128, 0.164);
+    padding: 20px;
+    gap: 10px;
+    border-radius: 10px;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+}
+.card > .tag {
+    color: rgba(128, 128, 128, 0.349);
+}
+.card > .name-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .rating-container {
+    display: flex;
+    align-items: center;
+}
+
+.card .bottom-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card .time {
+    color: orange ;
+}
+.actions-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.liked {
+    color: red ;
+}
+.body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.filter-checkboxes {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hide {
+    display: none;
+}
+.show {
+    display: flex;
+}
+@media all and (max-width: 500px) {
+    #cards-container {
+        grid-template-columns: 1fr;
+    }
+    .body {
+        grid-template-columns: 1fr;
+    }
+    .filter-buttons {
+        flex-direction: column;
+    }
+    .filter-buttons > button {
+        justify-content: center;
+    }
+    .menu {
+        display: block !important;
+    }
+    .links {
+        position: absolute;
+        top: 50px;
+        bottom: 0;
+        left: 0 ;
+        z-index: 100;
+        background-color: black;
+        flex-direction: column;
+        width: 40vw ;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .links a {
+        color: white;
+    }
+}
+
+@keyframes slider {
+    from {  
+        width: 0;
+    }
+    to {
+        width: 40vw ;
+    }
+}
